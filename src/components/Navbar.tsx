@@ -1,4 +1,5 @@
 import { Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 
 interface NavbarProps {
@@ -13,16 +14,18 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
           <Menu className="h-5 w-5" />
         </Button>
 
-        <span className="text-2xl font-bold tracking-wider bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+        <Link to="/" className="text-2xl font-bold tracking-wider bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
           SmileItsSunnah
-        </span>
+        </Link>
 
         <div className="flex-1" />
 
         <div className="hidden md:flex items-center gap-1">
-          <Button variant="ghost" className="text-sm hover:bg-secondary/50">
-            Home
-          </Button>
+          <Link to="/">
+            <Button variant="ghost" className="text-sm hover:bg-secondary/50">
+              Home
+            </Button>
+          </Link>
           <Button variant="ghost" className="text-sm hover:bg-secondary/50">
             About
           </Button>
