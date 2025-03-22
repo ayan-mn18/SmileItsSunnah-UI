@@ -86,3 +86,19 @@
     font-family: 'IBM Plex Sans', system-ui, sans-serif;
   }
 }
+
+/* ElevenLabs Widget Customization */
+elevenlabs-convai {
+  /* --convai-widget-width: 120px !important;
+  --convai-widget-height: 180px !important; */
+  position: fixed !important;
+  top: 20px !important;
+  right: 10px !important;
+  z-index: 10 !important;
+  opacity: 0.1 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+elevenlabs-convai:hover {
+  opacity: 1 !important;
+}
