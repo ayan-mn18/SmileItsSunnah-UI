@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+    
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 213 90% 45%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 240 10% 8%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 65%;
+    
+    --accent: 213 90% 45%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 10% 12%;
+    --input: 240 10% 8%;
+    --ring: 213 90% 45%;
+    
+    --radius: 0.75rem;
+  }
+}
+
+.geometric-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L45 15L30 30L15 15z' fill='%2360A5FA' fill-opacity='0.03'/%3E%3Cpath d='M30 30L45 45L30 60L15 45z' fill='%2360A5FA' fill-opacity='0.03'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-semibold tracking-tight;
+  }
+  .font-arabic {
+    font-family: 'Amiri', serif;
+  }
+  .font-sans {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  }
+}
